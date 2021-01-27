@@ -1,0 +1,42 @@
+{
+        "calories":{"en":"calories", "hu":"kalória", "sk":"kalórie"},
+        "en":{
+            "brand-logo":"Calorie tracker",
+            "delete-all":"Delete All",
+            "form-head": "Add Meal / Food Item",
+            "item-name":"Meal",
+            "item-calories":"Calories",
+            "item-date":"Select date",
+            "add-btn":"Add meal",
+            "update-btn":"Update meal",
+            "delete-btn":"Delete meal",
+            "back-btn":"Back",
+            "calories-text": "Total calories:"
+        },
+        "hu":{
+            "brand-logo":"Kalória számláló",
+            "delete-all":"Összes törlése",
+            "form-head": "Étel hozzáadása",
+            "item-name":"Étel",
+            "item-calories":"Kalória",
+            "item-date":"Dátum kiválasztása",
+            "add-btn":"Hozzáadás",
+            "update-btn":"Módosítás",
+            "delete-btn":"Törlés",
+            "back-btn":"Vissza",
+            "calories-text": "Kalória összesen:"
+        },
+        "sk":{
+            "brand-logo":"Kalorická kalkulačka",
+            "delete-all":"Vymazať všetko",
+            "form-head": "Pridať jedlo",
+            "item-name":"Jedlo",
+            "item-calories":"Kalória",
+            "item-date":"Vyberte si dátum",
+            "add-btn":"Pridať",
+            "update-btn":"Zmeniť",
+            "delete-btn":"Vymazať",
+            "back-btn":"Späť",
+            "calories-text": "Celková kalorická hodnota:"
+        }
+}

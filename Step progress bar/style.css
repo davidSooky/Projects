@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+:root {
+    --primary-color: #4B46AB;
+    --secondary-color: #29275E;
+    --bullet-margin: 50px;
+    --animation-time: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #9DA7C7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 40%;
+}
+
+.container .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.container .progress-bar .progress-step .bullet {
+    position: relative;
+    padding: 13px;
+    border-radius: 50%;
+    margin: 0 var(--bullet-margin);
+    border: 4px solid #29275E;
+    transition: all var(--animation-time);
+    cursor: pointer;
+}
+
+.container .progress-bar .progress-step .bullet.active::after, .container .progress-bar .progress-step .bullet::after {
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 10px);
+    transition: width var(--animation-time);
+    border-radius: 20px;
+}
+
+.container .progress-bar .progress-step .bullet.active::after {
+    width: calc(2*var(--bullet-margin) - 12px);
+}
+
+.container .progress-bar .progress-step .bullet::after {
+    width: 0;
+}
+
+.container .progress-bar .progress-step:last-child .bullet::after{
+    display: none;
+}
+
+.container .progress-bar .progress-step .bullet.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.container .progress-bar .progress-step .bullet.current {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: transparent;
+}
+
+.counter {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    width: 90px;
+    color: white;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn:active {
+    transform: scale(0.90);
+}
+
+.btn-finish {
+    display: block;
+    visibility: hidden;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
